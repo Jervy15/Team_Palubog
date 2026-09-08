@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Registry - Tricycle Regulator System</title>
+    
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>BPLO</h2> <!--[cite: 1] -->
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li> <!--[cite: 1] -->
+            <li><a href="application.html">Application</a></li> <!--[cite: 1] -->
+            <li class="active"><a href="operator.html">Operator</a></li> <!--[cite: 1] -->
+            <li><a href="unit.html">Tricycle Unit</a></li> <!--[cite: 1] -->
+            <li><a href="reports.html">Reports</a></li> <!--[cite: 1] -->
+            <li><a href="logs.html">Activity Logs</a></li> <!--[cite: 1] -->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1] -->
+            </div>
+            <div class="topbar-right">
+                <span>LOGGED IN AS <br><strong>Sumilang Mark Jay</strong></span> <!--[cite: 1] -->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1] -->
+                <!-- Updated Title and Subtitle for this specific page -->
+                <h2 style="margin: 10px 0 5px 0; color: #2c3e50;">Operator Registry</h2> <!--[cite: 1] -->
+                <p>Register tricycle operator in Tayabas City</p> <!--[cite: 1] -->
+            </div>
+
+            <!-- Table Section -->
+            <div class="activity-section">
+                
+                <!-- Table Controls & Actions -->
+                <div class="table-header-wrapper">
+                    <div class="table-controls">
+                        <input type="text" class="search-input" placeholder="Search by ref no. or operator">
+                    </div>
+                    <button class="btn-primary">+ Register Operator</button>
+                </div>
+
+                <!-- Operator Registry Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>OPERATOR ID</th> <!--[cite: 1] -->
+                            <th>NAME</th> <!--[cite: 1] -->
+                            <th>BARANGAY</th> <!--[cite: 1] -->
+                            <th>CONTACT NO.</th> <!--[cite: 1] -->
+                            <th>REGISTERED</th> <!--[cite: 1] -->
+                            <th>STATUS</th> <!--[cite: 1] -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>OP001</td> <!--[cite: 1] -->
+                            <td>DAZO, YEYE</td> <!--[cite: 1] -->
+                            <td>MATEUNA</td> <!--[cite: 1] -->
+                            <td>09124567897</td> <!--[cite: 1] -->
+                            <td>2025-08-24</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-treasurer">active</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>OP002</td> <!--[cite: 1] -->
+                            <td>ELISES, ZAREN</td> <!--[cite: 1] -->
+                            <td>LALO</td> <!--[cite: 1] -->
+                            <td>09865543215</td> <!--[cite: 1] -->
+                            <td>2025-07-28</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-treasurer">active</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>OP003</td> <!--[cite: 1] -->
+                            <td>NILO, WENDELL</td> <!--[cite: 1] -->
+                            <td>LALO</td> <!--[cite: 1] -->
+                            <td>09445433451</td> <!--[cite: 1] -->
+                            <td>2025-06-28</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-barangay">inactive</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr>
+                            <td>OP004</td> <!--[cite: 1] -->
+                            <td>PASAMBA, PATRICK TONGKO</td> <!--[cite: 1] -->
+                            <td>ILAYANG</td> <!-- Assuming location based on standard data formatting -->
+                            <td>09988766576</td> <!--[cite: 1] -->
+                            <td>2025-05-28</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-treasurer">active</span></td> <!--[cite: 1] -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Application - Tricycle Regulator System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Barangay Office</h2> 
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="barangay-dashboard.html">Dashboard</a></li> <!---->
+            <!-- Active state on Application -->
+            <li class="active"><a href="barangay-application.html">Application</a></li> <!---->
+            <li><a href="barangay-reports.html">Reports</a></li> <!--[cite: 1]-->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1]-->
+            </div>
+            <div class="topbar-right">
+                <span>LOGGED IN AS <br><strong>Admin</strong></span> <!--[cite: 1]-->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1]-->
+            </div>
+
+            <!-- Table Section -->
+            <div class="activity-section">
+                
+                <!-- Table Controls -->
+                <div class="table-controls">
+                    <input type="text" class="search-input" placeholder="Search by ref no. or operator"> <!--[cite: 1]-->
+                    <select class="filter-select">
+                        <option value="all">All statues</option> <!--[cite: 1]-->
+                        <option value="approved">Approved</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+
+                <!-- Franchise Application Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>REF.NO</th> <!--[cite: 1]-->
+                            <th>OPERATOR</th> <!--[cite: 1]-->
+                            <th>UNIT</th> <!--[cite: 1]-->
+                            <th>TYPE</th> <!--[cite: 1]-->
+                            <th>STATUS</th> <!--[cite: 1]-->
+                            <th>LAST UPDATE</th> <!--[cite: 1]-->
+                            <th>ACTION</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BPLO-01-2025</td> <!--[cite: 1]-->
+                            <td>Yeye</td> <!--[cite: 1]-->
+                            <td>QJ-1234</td> <!--[cite: 1]-->
+                            <td>RENEWAL</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-treasurer">APPROVED</span></td> <!--[cite: 1]-->
+                            <td>2025-08-28</td> <!--[cite: 1]-->
+                            <td><a href="#" class="btn-action">View</a></td> <!--[cite: 1]-->
+                        </tr>
+                        <tr>
+                            <td>BPLO-01-2025</td> <!--[cite: 1]-->
+                            <td>Yeye</td> <!--[cite: 1]-->
+                            <td>QJ-1234</td> <!--[cite: 1]-->
+                            <td>RENEWAL</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-treasurer">APPROVED</span></td> <!--[cite: 1]-->
+                            <td>2025-08-28</td> <!--[cite: 1]-->
+                            <td><a href="#" class="btn-action">View</a></td> <!--[cite: 1]-->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

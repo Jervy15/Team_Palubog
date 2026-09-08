@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Tricycle Units - Tricycle Regulator System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Traffic Office</h2> <!--[cite: 1]-->
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="traffic-dashboard.html">Dashboard</a></li> <!--[cite: 1]-->
+            <li><a href="traffic-application.html">Application</a></li> <!--[cite: 1]-->
+            <!-- Active state on Tricycle Unit -->
+            <li class="active"><a href="traffic-unit.html">Tricycle Unit</a></li> <!--[cite: 1]-->
+            <li><a href="traffic-reports.html">Reports</a></li> <!--[cite: 1]-->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1]-->
+            </div>
+            <div class="topbar-right">
+                <span>LOGGED IN AS <br><strong>Admin</strong></span> <!--[cite: 1]-->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1]-->
+                <h2 style="margin: 10px 0 5px 0; color: #2c3e50;">Tricycle Units</h2> <!--[cite: 1]-->
+                <p>Register tricycle units under franchise</p> <!--[cite: 1]-->
+            </div>
+
+            <!-- Table Section -->
+            <div class="activity-section">
+                
+                <!-- Table Controls (Search and Filter) -->
+                <div class="table-controls">
+                    <input type="text" class="search-input" placeholder="Search by plate, make , or opera"> <!--[cite: 1]-->
+                </div>
+
+                <!-- Tricycle Units Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PLATE NO.</th> <!--[cite: 1]-->
+                            <th>MAKE/MODEL</th> <!--[cite: 1]-->
+                            <th>YEAR</th> <!--[cite: 1]-->
+                            <th>COLOR</th> <!--[cite: 1]-->
+                            <th>BODY</th> <!--[cite: 1]-->
+                            <th>ENGINE NO.</th> <!--[cite: 1]-->
+                            <th>CHASSIS NO.</th> <!--[cite: 1]-->
+                            <th>OPERATOR</th> <!--[cite: 1]-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>QJ-1234</td> <!--[cite: 1]-->
+                            <td>HONDA XRM 125</td> <!--[cite: 1]-->
+                            <td>2022</td> <!--[cite: 1]-->
+                            <td>RED</td> <!--[cite: 1]-->
+                            <td>STANDARD</td> <!--[cite: 1]-->
+                            <td>ENG-001-2022</td> <!--[cite: 1]-->
+                            <td>CHS-001-2022</td> <!--[cite: 1]-->
+                            <td>DAZO</td> <!--[cite: 1]-->
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>QJ-5678</td> <!--[cite: 1]-->
+                            <td>YAMAHA SNIPER 150</td> <!--[cite: 1]-->
+                            <td>2020</td> <!--[cite: 1]-->
+                            <td>YELLOW</td> <!--[cite: 1]-->
+                            <td>PAD YAK</td> <!--[cite: 1]-->
+                            <td>ENG-002-2020</td> <!--[cite: 1]-->
+                            <td>CHS-002-2020</td> <!--[cite: 1]-->
+                            <td>ELISES</td> <!--[cite: 1]-->
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>QJ-9012</td> <!--[cite: 1]-->
+                            <td>HONDA TMX 125</td> <!--[cite: 1]-->
+                            <td>2023</td> <!--[cite: 1]-->
+                            <td>GREEN</td> <!--[cite: 1]-->
+                            <td>STANDARD</td> <!--[cite: 1]-->
+                            <td>ENG-003-2023</td> <!--[cite: 1]-->
+                            <td>CHS-003-2023</td> <!--[cite: 1]-->
+                            <td>NILO</td> <!--[cite: 1]-->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

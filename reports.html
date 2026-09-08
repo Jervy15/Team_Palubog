@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Tricycle Regulator System</title>
+    
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>BPLO</h2> <!--[cite: 1] -->
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li> <!--[cite: 1] -->
+            <li><a href="application.html">Application</a></li> <!--[cite: 1] -->
+            <li><a href="operator.html">Operator</a></li> <!--[cite: 1] -->
+            <li><a href="unit.html">Tricycle Unit</a></li> <!--[cite: 1] -->
+            <!-- The active class is now moved to Reports -->
+            <li class="active"><a href="reports.html">Reports</a></li> <!--[cite: 1] -->
+            <li><a href="logs.html">Activity Logs</a></li> <!--[cite: 1] -->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1] -->
+            </div>
+            <div class="topbar-right">
+                <span>LOGGED IN AS <br><strong>Sumilang Mark Jay</strong></span> <!--[cite: 1] -->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1] -->
+                <h2 style="margin: 10px 0 5px 0; color: #2c3e50;">Reports</h2> <!--[cite: 1] -->
+                <p>Generate and exports franchise monitoring reports</p> <!--[cite: 1] -->
+            </div>
+
+            <!-- Reports Statistics Cards -->
+            <div class="stats-grid">
+                
+                <!-- Stat Card 1 -->
+                <div class="stat-card">
+                    <h3>APPROVED MTOPS</h3> <!--[cite: 1] -->
+                    <p class="primary-stat">2</p> <!--[cite: 1] -->
+                    <p class="sub-stat">Active franchises</p> <!--[cite: 1] -->
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="stat-card">
+                    <h3>TOTAL FEES COLECTED</h3> <!--[cite: 1] -->
+                    <p class="primary-stat">PHP 1,700</p> <!--[cite: 1] -->
+                    <p class="sub-stat">From paid applications</p> <!--[cite: 1] -->
+                </div>
+
+            </div>
+
+            <!-- Table Section -->
+            <div class="activity-section">
+                <!-- Table Header & Actions -->
+                <div class="table-header-wrapper">
+                    <h3 style="margin: 0;">Active MTOP Records</h3>
+                    <button class="btn-primary btn-export">📥 Export Report</button>
+                </div>
+                <!-- MTOP Records Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PLATE NO.</th> <!--[cite: 1] -->
+                            <th>MTOP NO.</th> <!--[cite: 1] -->
+                            <th>REF NO.</th> <!--[cite: 1] -->
+                            <th>OPERATOR</th> <!--[cite: 1] -->
+                            <th>ISSUED</th> <!--[cite: 1] -->
+                            <th>EXPIRED</th> <!--[cite: 1] -->
+                            <th>FEE PAID</th> <!--[cite: 1] -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>QJ-1234</td> <!--[cite: 1] -->
+                            <td>MTOP-2025-001</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-001</td> <!--[cite: 1] -->
+                            <td>Dazo Christian</td> <!--[cite: 1] -->
+                            <td>2025-08-24</td> <!--[cite: 1] -->
+                            <td>2026-08-24</td> <!--[cite: 1] -->
+                            <td>PHP 850</td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>QJ-5678</td> <!--[cite: 1] -->
+                            <td>MTOP-2025-007</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-007</td> <!--[cite: 1] -->
+                            <td>Aadia Erro</td> <!--[cite: 1] -->
+                            <td>2025-03-28</td> <!--[cite: 1] -->
+                            <td>2026-03-28</td> <!--[cite: 1] -->
+                            <td>PHP 850</td> <!--[cite: 1] -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

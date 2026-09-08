@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Dashboard - Tricycle Regulator System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <!-- Cleaned up from the document's OCR typo -->
+            <h2>Barangay Office</h2> 
+        </div>
+        <ul class="sidebar-nav">
+            <!-- The active class is on Dashboard -->
+            <li class="active"><a href="barangay-dashboard.html">Dashboard</a></li> <!--[cite: 1]-->
+            <li><a href="barangay-application.html">Application</a></li> <!--[cite: 1]-->
+            <li><a href="barangay-reports.html">Reports</a></li> <!--[cite: 1]-->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1]-->
+            </div>
+            <div class="topbar-right">
+                <!-- Updated user details for Barangay Office -->
+                <span>LOGGED IN AS <br><strong>Admin</strong></span> <!--[cite: 1]-->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Dashboard Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1]-->
+                <p>System Dashboard</p> <!--[cite: 1]-->
+            </div>
+            
+            <div class="overview-title">
+                Overview - as of July 31, 2025 - Barangay Office 
+            </div>
+
+            <!-- Dashboard Statistics Cards -->
+            <div class="stats-grid">
+                
+                <div class="stat-card">
+                    <h3>Total application</h3> <!--[cite: 1]-->
+                    <p class="primary-stat">8</p> <!--[cite: 1]-->
+                    <p class="sub-stat">Approve/Active 2</p> <!--[cite: 1]-->
+                </div>
+
+                <div class="stat-card">
+                    <h3>Approval Rate</h3>
+                    <p class="primary-stat">25%</p> <!--[cite: 1]-->
+                    <p class="sub-stat">All time</p> <!--[cite: 1]-->
+                </div>
+
+                <div class="stat-card">
+                    <h3>In Process</h3> <!--[cite: 1]-->
+                    <p class="primary-stat">5</p> <!--[cite: 1]-->
+                    <p class="sub-stat">Across 4 Offices</p> <!--[cite: 1]-->
+                </div>
+
+                <div class="stat-card">
+                    <h3>Registered Operators</h3> <!--[cite: 1]-->
+                    <p class="primary-stat">8</p> <!--[cite: 1]-->
+                    <p class="sub-stat">7 Active</p> <!--[cite: 1]-->
+                </div>
+
+            </div>
+
+            <!-- Recent Activity Table -->
+            <div class="activity-section">
+                <h3>RECENT APPLICATION ACTIVITY</h3> <!--[cite: 1]-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ref No.</th>
+                            <th>Applicant</th>
+                            <th>Date</th>
+                            <th>Status / Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BPLO-2025-0008</td> <!--[cite: 1]-->
+                            <td>BALDAZO, JERVY</td> <!--[cite: 1]-->
+                            <td>2025-07-25</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-bplo">At BPLO</span></td> <!--[cite: 1]-->
+                        </tr>
+                        <tr>
+                            <td>BPLO-2025-0006</td> <!--[cite: 1]-->
+                            <td>NOBLEZA, JHUN LEO</td> <!--[cite: 1]-->
+                            <td>2025-07-20</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-bplo">At BPLO</span></td> <!--[cite: 1]-->
+                        </tr>
+                        <tr>
+                            <td>BPLO-2025-0005</td> <!--[cite: 1]-->
+                            <td>ELISES,ZAREN</td> <!--[cite: 1]-->
+                            <td>2025-07-03</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-barangay">At Barangay</span></td> <!--[cite: 1]-->
+                        </tr>
+                        <tr>
+                            <td>BPLO-2025-0004</td> <!--[cite: 1]-->
+                            <td>DAZO,YEYE</td> <!--[cite: 1]-->
+                            <td>2025-07-01</td> <!--[cite: 1]-->
+                            <td><span class="badge badge-treasurer">At Treasurer</span></td> <!--[cite: 1]-->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

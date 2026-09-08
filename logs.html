@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Logs - Tricycle Regulator System</title>
+    
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>BPLO</h2> <!-- -->
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li> <!--[cite: 1] -->
+            <li><a href="application.html">Application</a></li> <!--[cite: 1] -->
+            <li><a href="operator.html">Operator</a></li> <!--[cite: 1] -->
+            <li><a href="unit.html">Tricycle Unit</a></li> <!--[cite: 1] -->
+            <li><a href="reports.html">Reports</a></li> <!--[cite: 1] -->
+            <!-- The active class is now moved to Activity Logs -->
+            <li class="active"><a href="logs.html">Activity Logs</a></li> <!--[cite: 1] -->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <strong>TAYABAS CITY</strong> <!--[cite: 1] -->
+            </div>
+            <div class="topbar-right">
+                <span>LOGGED IN AS <br><strong>Sumilang Mark Jay</strong></span> <!--[cite: 1] -->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1] -->
+                <h2 style="margin: 10px 0 5px 0; color: #2c3e50;">Active logs</h2> <!--[cite: 1] -->
+                <p>Audit trail all actions recorded across ofifces</p> <!--[cite: 1] -->
+            </div>
+
+            <!-- Table Section -->
+            <div class="activity-section">
+                
+                <!-- Table Controls (Search and Filter) -->
+                <div class="table-controls">
+                    <input type="text" class="search-input" placeholder="Search by ref no. or operator"> <!--[cite: 1] -->
+                </div>
+
+                <!-- Activity Logs Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TIMESTAMP</th> <!--[cite: 1] -->
+                            <th>OFFICE</th> <!--[cite: 1] -->
+                            <th>STAFF</th> <!--[cite: 1] -->
+                            <th>ACTION</th> <!--[cite: 1] -->
+                            <th>REFERENCE</th> <!--[cite: 1] -->
+                            <th>DETAILS</th> <!--[cite: 1] -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>2025-07-25 10:32:14</td> <!--[cite: 1] -->
+                            <td>BPLO</td> <!--[cite: 1] -->
+                            <td>STA.MARIA</td> <!--[cite: 1] -->
+                            <td>APPLICATION RECIEVED</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-008</td> <!--[cite: 1] -->
+                            <td>New franchise application for unit QJ - 1234</td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>2025-07-25 10:32:14</td> <!--[cite: 1] -->
+                            <td>BPLO</td> <!--[cite: 1] -->
+                            <td>PATERNO</td> <!--[cite: 1] -->
+                            <td>REQUIRMENTS VERIFIED</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-006</td> <!--[cite: 1] -->
+                            <td>FORWARDED TO BARANGAY</td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>2025-07-25 10:32:14</td> <!--[cite: 1] -->
+                            <td>Traffic Office</td> <!--[cite: 1] -->
+                            <td>MENDOZA</td> <!--[cite: 1] -->
+                            <td>ROUTER ASSIGNED</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-005</td> <!--[cite: 1] -->
+                            <td>ROUTE CODE RC - 008 ASSIGNED FORWARDED TO TREASURES</td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr>
+                            <td>2025-07-25 10:32:14</td> <!--[cite: 1] -->
+                            <td>BARANGAY</td> <!--[cite: 1] -->
+                            <td>VILLANUEVA</td> <!--[cite: 1] -->
+                            <td>CLEARANCE ISSUED</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-004</td> <!--[cite: 1] -->
+                            <td>BARANGAY CLEARANCE BC - 2025 - 015 ISUUED FORWARDED TO TRAFFIC ENFORCER</td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr>
+                            <td>2025-07-25 10:32:14</td> <!--[cite: 1] -->
+                            <td>TREASURER</td> <!--[cite: 1] -->
+                            <td>BORJA</td> <!--[cite: 1] -->
+                            <td>PAYMEN RECORDED</td> <!--[cite: 1] -->
+                            <td>BPLO-2025-001</td> <!--[cite: 1] -->
+                            <td>PAYMENT PHP 850 RECORDED. MTOP - 2025 - 0007 - ISSUED</td> <!--[cite: 1] -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

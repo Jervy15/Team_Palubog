@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Tricycle Regulator System</title>
+    
+    <!-- This line connects your HTML to your new CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <!-- Edit department name here -->
+            <h2>BPLO</h2> <!--[cite: 1] -->
+        </div>
+        <ul class="sidebar-nav">
+            <li class="active"><a href="dashboard.html">Dashboard</a></li> <!--[cite: 1] -->
+            <li><a href="application.html">Application</a></li> <!--[cite: 1] -->
+            <li><a href="operator.html">Operator</a></li> <!--[cite: 1] -->
+            <li><a href="unit.html">Tricycle Unit</a></li> <!--[cite: 1] -->
+            <li><a href="reports.html">Reports</a></li> <!--[cite: 1] -->
+            <li><a href="logs.html">Activity Logs</a></li> <!--[cite: 1] -->
+        </ul>
+    </nav>
+
+    <!-- RIGHT SIDE (Top Bar + Dynamic Content) -->
+    <div class="main-wrapper">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <!-- Edit City Name here -->
+                <strong>TAYABAS CITY</strong> <!--[cite: 1] -->
+            </div>
+            <div class="topbar-right">
+                <!-- Edit User Name here -->
+                <span>LOGGED IN AS <br><strong>Sumilang Mark Jay</strong></span> <!--[cite: 1] -->
+                <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Dashboard Page Header -->
+            <div class="content-header">
+                <h1>CITY OF TAYABAS -Tricycle Regulator System</h1> <!--[cite: 1] -->
+                <p>System Dashboard</p> <!--[cite: 1] -->
+            </div>
+            
+            <div class="overview-title">
+                Overview - as of July 31, 2025 - BPLO <!--[cite: 1] -->
+            </div>
+
+            <!-- Dashboard Statistics Cards -->
+            <div class="stats-grid">
+                
+                <!-- Stat Card 1 -->
+                <div class="stat-card">
+                    <h3>Total application</h3> <!--[cite: 1] -->
+                    <p class="primary-stat">8</p> <!--[cite: 1] -->
+                    <p class="sub-stat">Approve/Active 2</p> <!--[cite: 1] -->
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="stat-card">
+                    <h3>Approval Rate</h3>
+                    <p class="primary-stat">25%</p> <!--[cite: 1] -->
+                    <p class="sub-stat">All time</p> <!--[cite: 1] -->
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="stat-card">
+                    <h3>In Process</h3> <!--[cite: 1] -->
+                    <p class="primary-stat">5</p> <!--[cite: 1] -->
+                    <p class="sub-stat">Across 4 Offices</p> <!--[cite: 1] -->
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="stat-card">
+                    <h3>Registered Operators</h3> <!--[cite: 1] -->
+                    <p class="primary-stat">8</p> <!--[cite: 1] -->
+                    <p class="sub-stat">7 Active</p> <!--[cite: 1] -->
+                </div>
+
+            </div>
+
+            <!-- Recent Activity Table -->
+            <div class="activity-section">
+                <h3>RECENT APPLICATION ACTIVITY</h3> <!--[cite: 1] -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ref No.</th>
+                            <th>Applicant</th>
+                            <th>Date</th>
+                            <th>Status / Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>BPLO-2025-0008</td> <!--[cite: 1] -->
+                            <td>BALDAZO, JERVY</td> <!--[cite: 1] -->
+                            <td>2025-07-25</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-bplo">At BPLO</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>BPLO-2025-0006</td> <!--[cite: 1] -->
+                            <td>NOBLEZA, JHUN LEO</td> <!--[cite: 1] -->
+                            <td>2025-07-20</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-bplo">At BPLO</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>BPLO-2025-0005</td> <!--[cite: 1] -->
+                            <td>ELISES,ZAREN</td> <!--[cite: 1] -->
+                            <td>2025-07-03</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-barangay">At Barangay</span></td> <!--[cite: 1] -->
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr>
+                            <td>BPLO-2025-0004</td> <!--[cite: 1] -->
+                            <td>DAZO,YEYE</td> <!--[cite: 1] -->
+                            <td>2025-07-01</td> <!--[cite: 1] -->
+                            <td><span class="badge badge-treasurer">At Treasurer</span></td> <!--[cite: 1] -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+        
+    </div>
+
+</body>
+</html>

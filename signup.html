@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - City of Tayabas</title>
+    <!-- We can reuse the login styling here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 26px;
+            margin: 0 0 5px 0;
+        }
+        .subtitle {
+            color: #4a4a4a;
+            font-size: 16px;
+            margin: 0 0 20px 0;
+            font-weight: bold;
+        }
+        .section-label {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+        .office-selector {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .card {
+            flex: 1;
+            background: #e5e5e5;
+            padding: 20px 10px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .card.active {
+            background: #a3cfff;
+            color: white;
+        }
+        .card.active p {
+            color: #e0e0e0;
+        }
+        .card .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin: 0 0 5px 0;
+            font-size: 13px;
+        }
+        .card p {
+            margin: 0;
+            font-size: 11px;
+            color: #4a4a4a;
+        }
+        .login-box {
+            background: #e0e0e0;
+            padding: 30px 40px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        /* Grid layout for the signup form fields */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2345ba;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #2345ba;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>City of Tayabas</h1> <!-- -->
+        <p class="subtitle">Create your account</p> <!-- -->
+    </div>
+
+    <div class="section-label">Select office</div> <!--[cite: 2] -->
+
+    <div class="office-selector">
+        <div class="card active">
+            <div class="icon">🏢</div>
+            <h3>Business Permit &<br>Licensing</h3> <!--[cite: 2] -->
+        </div>
+        <div class="card">
+            <div class="icon">🚦</div>
+            <h3>Traffic Management<br>Office</h3> <!--[cite: 2] -->
+        </div>
+        <div class="card">
+            <div class="icon">₱</div>
+            <h3>Office of the<br>Treasurer</h3> <!--[cite: 2] -->
+        </div>
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Barangay Service</h3> <!--[cite: 2] -->
+        </div>
+    </div>
+
+    <div class="login-box">
+        <form action="index.html" method="GET">
+            <div class="form-grid">
+                <!-- Row 1 -->
+                <div class="form-group">
+                    <label>Full Name</label> <!--[cite: 2] -->
+                    <input type="text" placeholder="Enter Your Full Name"> <!--[cite: 2] -->
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label> <!--[cite: 2] -->
+                    <input type="email" placeholder="Enter Your Email Address"> <!--[cite: 2] -->
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="form-group">
+                    <label>Password</label> <!--[cite: 2] -->
+                    <input type="password" placeholder="Enter Your Password"> <!--[cite: 2] -->
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label> <!--[cite: 2] -->
+                    <input type="password" placeholder="Confirm Your Password"> <!--[cite: 2] -->
+                </div>
+            </div>
+            
+            <button type="submit">Create Account</button> <!--[cite: 2] -->
+            <a href="index.html" class="back-link">Already have an account? Sign in</a>
+        </form>
+    </div>
+</div>
+<!-- JavaScript for Interactive Office Selection & Routing -->
+<script>
+    const cards = document.querySelectorAll('.card');
+    const form = document.querySelector('form');
+
+    // Define where each card should send the user after creating an account
+    const redirectPages = [
+        'index.html', // 0: BPLO (index.html defaults to the BPLO login view)
+        'index.html', // 1: Traffic Office
+        'index.html', // 2: Treasurer
+        'index.html'  // 3: Barangay
+    ];
+
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            // Remove the 'active' highlight from all cards
+            cards.forEach(c => c.classList.remove('active'));
+            
+            // Add the highlight only to the clicked card
+            card.classList.add('active');
+
+            // Tell the form exactly where to redirect based on the clicked card
+            form.action = redirectPages[index];
+        });
+    });
+</script>
+</body>
+</html>

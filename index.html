@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Government Office Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 11px;
+            color: #555;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 26px;
+            margin: 0 0 10px 0;
+        }
+        .subtitle {
+            color: #4a4a4a;
+            font-size: 14px;
+            margin: 0;
+        }
+        .office-selector {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .card {
+            flex: 1;
+            background: #e5e5e5;
+            padding: 25px 10px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .card.active {
+            background: #a3cfff; /* Light blue for selected state */
+        }
+        .card .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+        }
+        .card p {
+            margin: 0;
+            font-size: 10px;
+            color: #4a4a4a;
+        }
+        .login-box {
+            background: #e0e0e0;
+            padding: 30px 40px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .login-box h2 {
+            text-align: center;
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+        .login-box .form-subtitle {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .form-group label a {
+            color: #666;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+        .form-group input::placeholder {
+            color: #999;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2345ba; /* Deep blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #666;
+            margin: 0 0 20px 0;
+        }
+        .footer {
+            font-size: 12px;
+            color: #777;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-placeholder">logo to</div>
+        <h1>Municipal Government office Portal</h1>
+        <p class="subtitle">Select your office and sign in to access authorized service</p>
+    </div>
+
+    <div class="office-selector">
+        <div class="card active">
+            <div class="icon">🏢</div>
+            <h3>BPLO</h3>
+            <p>Business Permit &<br>Licensing</p>
+        </div>
+        <div class="card">
+            <div class="icon">🚚</div>
+            <h3>Traffic</h3>
+            <p>Traffic Management<br>Office</p>
+        </div>
+        <div class="card">
+            <div class="icon">🪙</div>
+            <h3>Treasurer</h3>
+            <p>Office of the<br>Treasurer</p>
+        </div>
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>BARANGAY</h3>
+            <p>Barangay Service</p>
+        </div>
+    </div>
+
+    <div class="login-box">
+        <h2>Sign in to BPLO</h2>
+        <p class="form-subtitle">Enter your office credentials for Business Permit & Licensing</p>
+        
+        <form action="dashboard.html" method="GET">
+            <div class="form-group">
+                <label>Username or Employee ID</label>
+                <input type="text" placeholder="Enter your username or Employee ID">
+            </div>
+            
+            <div class="form-group">
+                <label>Password <a href="#">Forgot password?</a></label>
+                <input type="password" placeholder="Enter your password">
+            </div>
+            
+            <button type="submit">Sign in to BPLO</button>
+
+            <!-- Add this link right below the button to connect them -->
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="signup.html" style="color: #333; font-size: 13px; font-weight: bold; text-decoration: none;">Create Account</a>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+    <div class="footer">
+        Authorized personnel only. All access is logged
+    </div>
+</div>
+<!-- JavaScript for Interactive Office Selection -->
+<script>
+    // 1. Select the HTML elements we want to change
+    const cards = document.querySelectorAll('.card');
+    const formTitle = document.querySelector('.login-box h2');
+    const formSubtitle = document.querySelector('.login-box .form-subtitle');
+    const submitBtn = document.querySelector('button[type="submit"]');
+    const form = document.querySelector('form');
+
+    // 2. Define the exact text and links for each department based on the mockups
+    const officeData = [
+        {
+            title: 'Sign in to BPLO',
+            subtitle: 'Enter your office credentials for Business Permit & Licensing',
+            button: 'Sign in to BPLO',
+            action: 'dashboard.html'
+        },
+        {
+            title: 'Sign in to Traffic',
+            subtitle: 'Enter your office credentials for Traffic Management Office',
+            button: 'Sign in to Traffic',
+            action: 'traffic-dashboard.html'
+        },
+        {
+            title: 'Sign in to Treasurer',
+            subtitle: 'Enter your office credentials for Office of the Treasurer',
+            button: 'Sign in to Treasurer',
+            action: 'treasurer-dashboard.html'
+        },
+        {
+            title: 'Sign in to BARANGAY',
+            subtitle: 'Enter your office credentials for Barangay Service',
+            button: 'Sign in to BARANGAY',
+            action: 'barangay-dashboard.html'
+        }
+    ];
+
+    // 3. Make each card clickable
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            // Remove the 'active' blue highlight from all cards
+            cards.forEach(c => c.classList.remove('active'));
+            
+            // Add the 'active' blue highlight to the specific card that was clicked
+            card.classList.add('active');
+
+            // Update the form's text and destination using the data we defined above
+            const data = officeData[index];
+            formTitle.textContent = data.title;
+            formSubtitle.textContent = data.subtitle;
+            submitBtn.textContent = data.button;
+            form.action = data.action;
+        });
+    });
+</script>
+</body>
+</html>
