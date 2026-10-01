@@ -34,7 +34,7 @@
                 <strong>TAYABAS CITY</strong> <!--[cite: 1] -->
             </div>
             <div class="topbar-right">
-                <span>LOGGED IN AS <br><strong>Admin</strong></span> <!--[cite: 1] -->
+                <span>LOGGED IN AS <br><strong>Sumilang Mark Jay</strong></span> <!--[cite: 1] -->
                 <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
             </div>
         </header>
@@ -63,7 +63,7 @@
                             <option value="pending">Pending</option>
                         </select>
                     </div>
-                    <button class="btn-primary">+ Add Application</button>
+                    <button class="btn-primary" id="openModalBtn">+ Add Application</button>
                 </div>
 
                 <!-- Franchise Application Table -->
@@ -117,5 +117,58 @@
 
         </main>
     </div>
+<!-- Modal Background Overlay -->
+    <div id="addModal" class="modal-overlay">
+        <!-- Modal Content Box -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Application</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            
+            <form action="#">
+                <div class="form-group">
+                    <label>Applicant Name</label>
+                    <input type="text" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label>Unit / Plate No.</label>
+                    <input type="text" placeholder="Enter plate number">
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelModal">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+        const modal = document.getElementById('addModal');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModal');
+        const cancelBtn = document.getElementById('cancelModal');
+
+        // Show modal (changes display from 'none' to 'flex')
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Hide modal function
+        const hideModal = () => {
+            modal.style.display = 'none';
+        };
+
+        // Hide when clicking the X or Cancel button
+        closeBtn.addEventListener('click', hideModal);
+        cancelBtn.addEventListener('click', hideModal);
+
+        // Hide if the user clicks the dark background outside the white box
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
 </body>
 </html>
